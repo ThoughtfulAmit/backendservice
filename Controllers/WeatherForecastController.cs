@@ -29,7 +29,7 @@ namespace WeatherMicroSvc.Controllers
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
-                Date = DateTime.Now.AddDays(index).ToShortDateString(),
+                Date = DateTime.Now.AddDays(index).ToLongDateString(),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
